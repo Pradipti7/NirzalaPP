@@ -6,9 +6,88 @@ export default function Hero() {
   return (
     <header
       id="top"
-      className="relative bg-grid-paper bg-grid overflow-hidden"
+      className="relative isolate animate-grid-drift overflow-hidden bg-grid-paper bg-grid"
     >
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 pt-4 sm:pt-8 pb-16 sm:pb-24">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+      >
+        <div className="animate-hatch-drift absolute -inset-x-1/4 inset-y-0 bg-[repeating-linear-gradient(135deg,rgba(22,50,79,0.05)_0px,rgba(22,50,79,0.05)_1px,transparent_1px,transparent_12px)]" />
+        <div className="animate-sweep absolute inset-y-0 -left-1/3 w-2/3 bg-gradient-to-r from-transparent via-flag/[0.045] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blueprint-line/25 to-transparent" />
+
+        <svg
+          viewBox="0 0 64 64"
+          className="animate-drift-b absolute left-[5%] top-[14%] h-16 w-16 text-blueprint-ink opacity-10"
+        >
+          <g fill="none" stroke="currentColor" strokeWidth="1">
+            <circle cx="24" cy="24" r="10" />
+            <path d="M24 4v12M24 32v12M4 24h12M32 24h12" />
+            <circle cx="48" cy="46" r="6" />
+            <path d="M48 34v6M48 52v6M36 46h6M54 46h6" />
+          </g>
+          <circle cx="24" cy="24" r="1.5" fill="currentColor" stroke="none" />
+        </svg>
+
+        <svg
+          viewBox="0 0 120 32"
+          className="animate-rotate-a absolute right-[7%] top-[9%] h-8 w-28 text-blueprint-ink opacity-10"
+        >
+          <g fill="none" stroke="currentColor" strokeWidth="1">
+            <path d="M6 18h108" />
+            <path d="M6 14 2 18l4 4M114 14l4 4-4 4" />
+            <path d="M14 8v20M106 8v20" />
+          </g>
+          <text
+            x="60"
+            y="11"
+            textAnchor="middle"
+            fill="currentColor"
+            fontFamily="IBM Plex Mono, monospace"
+            fontSize="7"
+            letterSpacing="1"
+          >
+            12.50 m
+          </text>
+        </svg>
+
+        <svg
+          viewBox="0 0 96 64"
+          className="animate-drift-a absolute bottom-[13%] left-[3%] h-16 w-24 text-blueprint-ink opacity-10"
+        >
+          <g fill="none" stroke="currentColor" strokeWidth="1">
+            <path d="M4 56h88M4 48h88" />
+            <path d="M8 48 32 12 56 48 80 12 92 48" />
+            <path d="M32 12v36M56 48V12M80 12v36" />
+          </g>
+        </svg>
+
+        <svg
+          viewBox="0 0 96 48"
+          className="animate-rotate-b absolute bottom-[7%] right-[9%] h-12 w-24 text-blueprint-ink opacity-10"
+        >
+          <g fill="none" stroke="currentColor" strokeWidth="1">
+            <path d="M0 12h96M0 18h96" />
+            <path d="M24 18v24h12V18M60 18v24h12V18" />
+            <path d="M20 42h20M56 42h20" />
+            <path d="M30 24l6 6M66 24l6 6" />
+          </g>
+        </svg>
+
+        <svg
+          viewBox="0 0 40 100"
+          className="animate-rotate-c absolute right-[2%] top-[43%] h-24 w-10 text-blueprint-ink opacity-10"
+        >
+          <g fill="none" stroke="currentColor" strokeWidth="1">
+            <path d="M20 4v92" strokeDasharray="4 4" />
+            <path d="M10 4h20M10 96h20" />
+            <circle cx="20" cy="50" r="4" />
+            <path d="M20 42v16M12 50h16" />
+          </g>
+        </svg>
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-5xl px-6 pb-16 pt-4 sm:px-10 sm:pb-24 sm:pt-8">
         <div className="mt-6 grid grid-cols-1 items-stretch gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-6">
           <div className="relative order-2 flex min-w-0 flex-col">
             <div
@@ -52,6 +131,10 @@ export default function Hero() {
                 </span>
               </span>
             </h1>
+
+            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-blueprint-steel opacity-0 animate-fadein sm:text-[11px]">
+              Civil engineer · Site development · Structural design
+            </p>
 
             <div className="mt-7 h-px bg-blueprint-line/40 relative w-full max-w-xl overflow-hidden">
               <div className="absolute inset-y-0 left-0 h-px bg-flag animate-drawline" />
