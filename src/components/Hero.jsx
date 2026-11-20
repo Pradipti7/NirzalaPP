@@ -32,7 +32,7 @@ export default function Hero() {
                   pathLength={100}
                   stroke="currentColor"
                   strokeWidth="0.8"
-                  className="[stroke-dasharray:100] animate-draw [animation-delay:200ms]"
+                  className="[stroke-dasharray:100] animate-draw [animation-delay:100ms]"
                 />
               </svg>
               <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap bg-blueprint-paper px-1.5 font-mono text-[9px] tracking-[0.2em] text-blueprint-steel">
@@ -41,13 +41,15 @@ export default function Hero() {
             </div>
 
             <h1 className="font-display font-semibold text-blueprint-ink tracking-tight leading-[0.92] text-6xl sm:text-8xl text-balance">
-              <span className="block text-2xl sm:text-4xl font-medium text-blueprint-steel tracking-normal leading-none">
+              <span className="block text-2xl sm:text-4xl font-medium text-blueprint-steel tracking-normal leading-none opacity-0 [animation:fadeup_0.5s_ease-out_0.1s_forwards]">
                 I am
               </span>
-              <span className="mt-1 block origin-left transition-transform duration-300 hover:scale-[1.02] sm:mt-2">
-                Nirjala
-                <br />
-                Prajapati
+              <span className="mt-1 block opacity-0 [animation:fadeup_0.6s_ease-out_0.25s_forwards] sm:mt-2">
+                <span className="block origin-left transition-transform duration-300 hover:scale-[1.02]">
+                  Nirjala
+                  <br />
+                  Prajapati
+                </span>
               </span>
             </h1>
 
@@ -61,7 +63,7 @@ export default function Hero() {
 
             <div className="mt-auto flex flex-wrap gap-4 pt-8 opacity-0 animate-fadein">
               <a
-                href="/RESUME_NIRJALA%20PRAJAPATI.pdf"
+                href="RESUME_NIRJALA%20PRAJAPATI.pdf"
                 download
                 className="inline-flex items-center gap-2 bg-blueprint-ink text-white px-6 py-3 text-sm font-medium hover:bg-flag transition-all duration-300 hover:scale-[1.05] shadow-[4px_4px_0_0_rgba(22,50,79,0.18)]"
               >
@@ -119,16 +121,16 @@ export default function Hero() {
               >
                 <g fill="none" stroke="currentColor" strokeWidth="1">
                   <path d="M0 470H400M0 476H400" pathLength={100} vectorEffect="non-scaling-stroke" className={draw} />
-                  <path d="M12 470 2 486M36 470 26 486M60 470 50 486M340 470 330 486M364 470 354 486M388 470 378 486" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:100ms]`} />
-                  <path d="M56 300h288M56 310h288" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:200ms]`} />
-                  <path d="M72 300V180H328V300" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:300ms]`} />
-                  <path d="M72 180 132 300 192 180 252 300 312 180 328 300M72 300 132 180 192 300 252 180 312 300" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:400ms]`} />
-                  <path d="M132 180v120M192 180v120M252 180v120M312 180v120" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:500ms]`} />
-                  <path d="M72 300v170M328 300v170M60 300h24v170H60zM316 300h24v170h-24z" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:600ms]`} />
-                  <path d="M200 40v460" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:300ms]`} />
-                  <path d="M40 100H360M40 94v12M360 94v12M72 120V94M328 120V94" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:100ms]`} />
+                  <path d="M12 470 2 486M36 470 26 486M60 470 50 486M340 470 330 486M364 470 354 486M388 470 378 486" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:50ms]`} />
+                  <path d="M56 300h288M56 310h288" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:100ms]`} />
+                  <path d="M72 300V180H328V300" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:150ms]`} />
+                  <path d="M72 180 132 300 192 180 252 300 312 180 328 300M72 300 132 180 192 300 252 180 312 300" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:200ms]`} />
+                  <path d="M132 180v120M192 180v120M252 180v120M312 180v120" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:250ms]`} />
+                  <path d="M72 300v170M328 300v170M60 300h24v170H60zM316 300h24v170h-24z" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:300ms]`} />
+                  <path d="M200 40v460" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:150ms]`} />
+                  <path d="M40 100H360M40 94v12M360 94v12M72 120V94M328 120V94" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:50ms]`} />
                 </g>
-                <g fill="currentColor" className="opacity-0 [animation:fadein_0.6s_ease-out_1.9s_forwards]">
+                <g fill="currentColor" className="opacity-0 [animation:fadein_0.6s_ease-out_0.9s_forwards]">
                   <circle cx="72" cy="180" r="2" />
                   <circle cx="132" cy="300" r="2" />
                   <circle cx="192" cy="180" r="2" />
@@ -140,7 +142,7 @@ export default function Hero() {
                   y="92"
                   textAnchor="middle"
                   fill="currentColor"
-                  className="opacity-0 [animation:fadein_0.6s_ease-out_1.9s_forwards]"
+                  className="opacity-0 [animation:fadein_0.6s_ease-out_0.9s_forwards]"
                   fontFamily="IBM Plex Mono, monospace"
                   fontSize="9"
                   letterSpacing="2"
@@ -152,7 +154,7 @@ export default function Hero() {
                   y="505"
                   textAnchor="middle"
                   fill="currentColor"
-                  className="opacity-0 [animation:fadein_0.6s_ease-out_1.9s_forwards]"
+                  className="opacity-0 [animation:fadein_0.6s_ease-out_0.9s_forwards]"
                   fontFamily="IBM Plex Mono, monospace"
                   fontSize="8"
                   letterSpacing="2"
@@ -161,11 +163,11 @@ export default function Hero() {
                 </text>
               </svg>
 
-              <div className="opacity-0 [animation:fadeup_0.8s_ease-out_2.1s_forwards]">
+              <div className="animate-build -m-4 p-4">
                 <div className="group relative z-10 aspect-[3/4] -rotate-[1.5deg] border border-blueprint-line/60 bg-blueprint-panel p-2 shadow-[10px_10px_0_0_#16324F] transition-[transform,box-shadow] duration-300 hover:rotate-0 hover:scale-[1.03] hover:shadow-[14px_14px_0_0_#16324F] hover:ring-2 hover:ring-[#F6DE8A]/80">
                   <div className="relative h-full w-full overflow-hidden border border-blueprint-ink/20">
                     <img
-                      src="/niru.jpg"
+                      src="niru.jpg"
                       alt="Portrait of Nirjala Prajapati"
                       className="absolute inset-0 h-full w-full object-cover object-top transition-[filter] duration-500 group-hover:brightness-110 group-hover:saturate-110"
                     />

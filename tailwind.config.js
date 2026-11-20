@@ -51,10 +51,15 @@ export default {
           "0%": { opacity: "0", transform: "translateY(14px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        build: {
+          "0%": { opacity: "0", clipPath: "inset(0 0 100% 0)", transform: "translateY(-14px)" },
+          "100%": { opacity: "1", clipPath: "inset(0 0 0 0)", transform: "translateY(0)" },
+        },
       },
       animation: {
         drawline: "drawline 1.1s cubic-bezier(0.65,0,0.35,1) 0.15s forwards",
-        draw: "draw 1.4s cubic-bezier(0.65,0,0.35,1) forwards",
+        draw: "draw 0.7s cubic-bezier(0.65,0,0.35,1) forwards",
+        build: "build 1.2s cubic-bezier(0.65,0,0.35,1) 0.35s both",
         fadein: "fadein 0.7s ease-out 0.5s forwards",
         fadeup: "fadeup 0.6s cubic-bezier(0.65,0,0.35,1) forwards",
       },
