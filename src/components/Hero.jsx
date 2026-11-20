@@ -7,159 +7,40 @@ export default function Hero() {
       className="relative bg-grid-paper bg-grid overflow-hidden"
     >
       <div className="max-w-5xl mx-auto px-6 sm:px-10 pt-4 sm:pt-8 pb-16 sm:pb-24">
-        <div className="mt-6 grid grid-cols-1 items-start gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-8">
-          {/* introduction — cylinder hangs off its left edge */}
-          <div className="relative order-2 min-w-0">
-            <div className="absolute hidden md:block top-0 bottom-0 left-0 w-12 -translate-x-full -ml-6">
-              <svg
-                viewBox="0 0 48 100"
-              preserveAspectRatio="none"
-              className="h-full w-full text-blueprint-line"
+        <div className="mt-6 grid grid-cols-1 items-stretch gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-6">
+          <div className="relative order-2 flex min-w-0 flex-col">
+            <div
               aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 left-0 hidden w-6 -translate-x-full -ml-2 md:block"
             >
-              <defs>
-                <pattern
-                  id="rebar-hatch"
-                  width="8"
-                  height="8"
-                  patternUnits="userSpaceOnUse"
-                  patternTransform="rotate(45)"
-                >
-                  <line
-                    x1="0"
-                    y1="0"
-                    x2="0"
-                    y2="8"
-                    stroke="currentColor"
-                    strokeWidth="0.7"
-                  />
-                </pattern>
-              </defs>
-              <rect
-                x="16"
-                y="8"
-                width="16"
-                height="84"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.2"
-                pathLength={100}
-                className="[stroke-dasharray:100] animate-draw"
-              />
-              <rect
-                x="16.75"
-                y="10.5"
-                width="14.5"
-                height="79"
-                fill="url(#rebar-hatch)"
-                stroke="none"
-                opacity="0.35"
-                className="animate-fadein [animation-delay:700ms]"
-              />
-              <line
-                x1="24"
-                y1="2"
-                x2="24"
-                y2="98"
-                stroke="currentColor"
-                strokeWidth="0.6"
-                strokeDasharray="5 4"
-                opacity="0.55"
-              />
-              <rect
-                x="12"
-                y="3"
-                width="24"
-                height="6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="0.9"
-                pathLength={100}
-                className="[stroke-dasharray:100] animate-draw [animation-delay:180ms]"
-              />
-              <rect
-                x="6"
-                y="92"
-                width="36"
-                height="8"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="0.9"
-                pathLength={100}
-                className="[stroke-dasharray:100] animate-draw [animation-delay:320ms]"
-              />
-              <path
-                d="M10 92 L10 100 M38 92 L38 100"
-                stroke="currentColor"
-                strokeWidth="0.6"
-                opacity="0.7"
-              />
-              <line
-                x1="3"
-                y1="16"
-                x2="3"
-                y2="84"
-                stroke="currentColor"
-                strokeWidth="0.6"
-                opacity="0.75"
-              />
-              <line
-                x1="3"
-                y1="16"
-                x2="6"
-                y2="16"
-                stroke="currentColor"
-                strokeWidth="0.6"
-                opacity="0.75"
-              />
-              <line
-                x1="3"
-                y1="84"
-                x2="6"
-                y2="84"
-                stroke="currentColor"
-                strokeWidth="0.6"
-                opacity="0.75"
-              />
-            </svg>
-
-            <span className="pointer-events-none absolute left-3 bottom-8 origin-left -rotate-90 whitespace-nowrap font-mono text-[9px] tracking-[0.25em] text-blueprint-steel">
-              H = 3.0 m · NTS
-            </span>
-            <span className="pointer-events-none absolute right-0 top-1 font-mono text-[9px] leading-none text-blueprint-line">
-              A
-            </span>
-            <span className="pointer-events-none absolute right-0 bottom-1 font-mono text-[9px] leading-none text-blueprint-line">
-              A
-            </span>
-
-            <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute left-0 right-0 h-px bg-flag/60 [animation:scan_2.6s_linear_1.6s_infinite]"
-                />
+              <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-blueprint-line/50" />
+              <span className="absolute left-1/2 top-0 h-px w-3 -translate-x-1/2 bg-blueprint-line/60" />
+              <span className="absolute bottom-0 left-1/2 h-px w-3 -translate-x-1/2 bg-blueprint-line/60" />
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap bg-blueprint-paper px-1.5 font-mono text-[9px] tracking-[0.2em] text-blueprint-steel">
+                ELEV. +3.00
+              </span>
             </div>
 
             <h1 className="font-display font-semibold text-blueprint-ink tracking-tight leading-[0.92] text-6xl sm:text-8xl text-balance">
-              <span className="text-2xl sm:text-4xl font-medium text-blueprint-steel tracking-normal">
+              <span className="block text-2xl sm:text-4xl font-medium text-blueprint-steel tracking-normal leading-none">
                 I am
               </span>
-              <br />
-              <span className="inline-block origin-left transition-transform duration-300 hover:scale-[1.02]">
+              <span className="mt-1 block origin-left transition-transform duration-300 hover:scale-[1.02] sm:mt-2">
                 Nirjala
                 <br />
                 Prajapati
               </span>
             </h1>
 
-            <div className="mt-7 h-px bg-blueprint-line/40 relative w-full max-w-md overflow-hidden">
+            <div className="mt-7 h-px bg-blueprint-line/40 relative w-full max-w-xl overflow-hidden">
               <div className="absolute inset-y-0 left-0 h-px bg-flag animate-drawline" />
             </div>
 
-            <p className="mt-7 max-w-md text-lg text-blueprint-graphite opacity-0 animate-fadein">
+            <p className="mt-6 max-w-xl text-lg text-blueprint-graphite opacity-0 animate-fadein">
               Motivated civil engineering graduate with hands-on academic and field experience, eager to apply theoretical knowledge to practical construction projects and site development.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4 opacity-0 animate-fadein">
+            <div className="mt-auto flex flex-wrap gap-4 pt-8 opacity-0 animate-fadein">
               <a
                 href="/RESUME_NIRJALA%20PRAJAPATI.pdf"
                 download
@@ -199,7 +80,7 @@ export default function Hero() {
           </div>
 
           {/* portrait */}
-          <div className="order-1 md:order-3 w-60 sm:w-72 shrink-0 justify-self-center md:justify-self-end md:mt-20">
+          <div className="relative order-1 flex w-64 flex-col sm:w-72 md:order-3 md:w-80 md:justify-self-end">
             {/* washi tape — peeled corner strips */}
             <span
               aria-hidden="true"
@@ -210,56 +91,54 @@ export default function Hero() {
               className="absolute -right-3 top-6 z-20 w-10 h-3 bg-blueprint-line/25 rotate-[5deg]"
             />
 
-            <div className="relative aspect-[3/4] border border-blueprint-line/50 bg-blueprint-panel/60 transition-transform duration-300 hover:scale-[1.03]">
-              {[
-                "top-1 left-1 border-t-2 border-l-2",
-                "top-1 right-1 border-t-2 border-r-2",
-                "bottom-1 left-1 border-b-2 border-l-2",
-                "bottom-1 right-1 border-b-2 border-r-2",
-              ].map((c) => (
-                <span
-                  key={c}
-                  aria-hidden="true"
-                  className={`absolute ${c} w-3 h-3 border-blueprint-line/60`}
+            <div className="group relative aspect-[3/4] -rotate-[1.5deg] border border-blueprint-line/60 bg-blueprint-panel p-2 shadow-[10px_10px_0_0_#16324F] transition-[transform,box-shadow] duration-300 hover:scale-[1.03] hover:ring-2 hover:ring-[#F6DE8A]/80">
+              <div className="relative h-full w-full overflow-hidden border border-blueprint-ink/20">
+                <img
+                  src="/niru.jpg"
+                  alt="Portrait of Nirjala Prajapati"
+                  className="absolute inset-0 h-full w-full object-cover object-top transition-[filter] duration-500 group-hover:brightness-110 group-hover:saturate-110"
                 />
-              ))}
-              <div className="absolute inset-2 border border-dashed border-blueprint-line/30" />
+                <div className="pointer-events-none absolute inset-0 bg-[#F6DE8A] opacity-0 mix-blend-soft-light transition-opacity duration-500 group-hover:opacity-30" />
 
-              <svg
-                viewBox="0 0 100 100"
-                className="absolute inset-0 h-full w-full text-blueprint-line/50"
-              >
-                <line
-                  x1="50"
-                  y1="3"
-                  x2="50"
-                  y2="97"
-                  stroke="currentColor"
-                  strokeWidth="0.7"
-                  strokeDasharray="6 4"
-                />
-                <line
-                  x1="3"
-                  y1="50"
-                  x2="97"
-                  y2="50"
-                  stroke="currentColor"
-                  strokeWidth="0.7"
-                  strokeDasharray="6 4"
-                />
-                <circle cx="50" cy="50" r="1.4" fill="currentColor" stroke="none" />
-              </svg>
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-4 border-r border-blueprint-line/40 bg-blueprint-paper/80 transition-opacity duration-500 group-hover:opacity-0">
+                  {[18, 38, 58, 78].map((top) => (
+                    <span
+                      key={top}
+                      style={{ top: `${top}%` }}
+                      className="absolute right-0 h-px w-2 bg-blueprint-line/70"
+                    />
+                  ))}
+                </div>
 
-              <img
-                src="/niru.jpg"
-                alt="Portrait of Nirjala Prajapati"
-                className="absolute left-[10%] top-[10%] h-[80%] w-[80%] border border-blueprint-line/40 object-cover object-top"
-              />
+                <svg
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                  className="pointer-events-none absolute inset-0 h-full w-full text-blueprint-ink/30"
+                >
+                  <path
+                    d="M0 0h8M0 0v8M100 0h-8M100 0v8M0 100h8M0 100v-8M100 100h-8M100 100v-8"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="0.5"
+                  />
+                </svg>
+
+                <span className="absolute right-2 top-2 bg-flag px-1.5 py-0.5 font-mono text-[8px] font-bold tracking-[0.18em] text-white">
+                  PL. 01
+                </span>
+                <span className="absolute bottom-2 right-2 font-mono text-[8px] tracking-[0.18em] text-blueprint-ink/70">
+                  PHOTO / 01
+                </span>
+              </div>
+
+              <span className="pointer-events-none absolute -left-5 top-1/2 hidden -translate-y-1/2 -rotate-90 whitespace-nowrap font-mono text-[8px] tracking-[0.3em] text-blueprint-steel sm:block">
+                PHOTOGRAPHIC PLATE
+              </span>
             </div>
 
-            <div className="mt-4 flex items-center justify-center gap-2 font-mono text-[9px] tracking-[0.18em] text-blueprint-steel">
+            <div className="mt-auto flex items-center justify-center gap-2 pt-4 font-mono text-[9px] tracking-[0.18em] text-blueprint-steel">
               <span className="h-px w-6 bg-blueprint-line/50" />
-              FIG. 01 — SUBJECT N.P
+              FIG. 01 — NIRJALA PRAJAPATI
               <span className="h-px w-6 bg-blueprint-line/50" />
             </div>
 
