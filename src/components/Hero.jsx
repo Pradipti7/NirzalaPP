@@ -1,6 +1,8 @@
 import { LinkedIn, Mail } from "./Icons.jsx";
 
 export default function Hero() {
+  const draw = "[stroke-dasharray:100] animate-draw";
+
   return (
     <header
       id="top"
@@ -13,9 +15,26 @@ export default function Hero() {
               aria-hidden="true"
               className="pointer-events-none absolute inset-y-0 left-0 hidden w-6 -translate-x-full -ml-2 md:block"
             >
-              <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-blueprint-line/50" />
-              <span className="absolute left-1/2 top-0 h-px w-3 -translate-x-1/2 bg-blueprint-line/60" />
-              <span className="absolute bottom-0 left-1/2 h-px w-3 -translate-x-1/2 bg-blueprint-line/60" />
+              <svg
+                viewBox="0 0 24 100"
+                preserveAspectRatio="none"
+                className="absolute inset-0 h-full w-full text-blueprint-line/60"
+              >
+                <path
+                  d="M12 0V100"
+                  pathLength={100}
+                  stroke="currentColor"
+                  strokeWidth="0.6"
+                  className="[stroke-dasharray:100] animate-draw"
+                />
+                <path
+                  d="M6 0H18M6 100H18"
+                  pathLength={100}
+                  stroke="currentColor"
+                  strokeWidth="0.8"
+                  className="[stroke-dasharray:100] animate-draw [animation-delay:200ms]"
+                />
+              </svg>
               <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap bg-blueprint-paper px-1.5 font-mono text-[9px] tracking-[0.2em] text-blueprint-steel">
                 ELEV. +3.00
               </span>
@@ -91,49 +110,103 @@ export default function Hero() {
               className="absolute -right-3 top-6 z-20 w-10 h-3 bg-blueprint-line/25 rotate-[5deg]"
             />
 
-            <div className="group relative aspect-[3/4] -rotate-[1.5deg] border border-blueprint-line/60 bg-blueprint-panel p-2 shadow-[10px_10px_0_0_#16324F] transition-[transform,box-shadow] duration-300 hover:scale-[1.03] hover:ring-2 hover:ring-[#F6DE8A]/80">
-              <div className="relative h-full w-full overflow-hidden border border-blueprint-ink/20">
-                <img
-                  src="/niru.jpg"
-                  alt="Portrait of Nirjala Prajapati"
-                  className="absolute inset-0 h-full w-full object-cover object-top transition-[filter] duration-500 group-hover:brightness-110 group-hover:saturate-110"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-[#F6DE8A] opacity-0 mix-blend-soft-light transition-opacity duration-500 group-hover:opacity-30" />
-
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-4 border-r border-blueprint-line/40 bg-blueprint-paper/80 transition-opacity duration-500 group-hover:opacity-0">
-                  {[18, 38, 58, 78].map((top) => (
-                    <span
-                      key={top}
-                      style={{ top: `${top}%` }}
-                      className="absolute right-0 h-px w-2 bg-blueprint-line/70"
-                    />
-                  ))}
-                </div>
-
-                <svg
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="none"
-                  className="pointer-events-none absolute inset-0 h-full w-full text-blueprint-ink/30"
+            <div className="relative">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 400 520"
+                preserveAspectRatio="none"
+                className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[calc(100%_+_5rem)] w-[calc(100%_+_5rem)] -translate-x-1/2 -translate-y-1/2 text-blueprint-line/25"
+              >
+                <g fill="none" stroke="currentColor" strokeWidth="1">
+                  <path d="M0 470H400M0 476H400" pathLength={100} vectorEffect="non-scaling-stroke" className={draw} />
+                  <path d="M12 470 2 486M36 470 26 486M60 470 50 486M340 470 330 486M364 470 354 486M388 470 378 486" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:100ms]`} />
+                  <path d="M56 300h288M56 310h288" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:200ms]`} />
+                  <path d="M72 300V180H328V300" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:300ms]`} />
+                  <path d="M72 180 132 300 192 180 252 300 312 180 328 300M72 300 132 180 192 300 252 180 312 300" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:400ms]`} />
+                  <path d="M132 180v120M192 180v120M252 180v120M312 180v120" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:500ms]`} />
+                  <path d="M72 300v170M328 300v170M60 300h24v170H60zM316 300h24v170h-24z" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:600ms]`} />
+                  <path d="M200 40v460" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:300ms]`} />
+                  <path d="M40 100H360M40 94v12M360 94v12M72 120V94M328 120V94" pathLength={100} vectorEffect="non-scaling-stroke" className={`${draw} [animation-delay:100ms]`} />
+                </g>
+                <g fill="currentColor" className="opacity-0 [animation:fadein_0.6s_ease-out_1.9s_forwards]">
+                  <circle cx="72" cy="180" r="2" />
+                  <circle cx="132" cy="300" r="2" />
+                  <circle cx="192" cy="180" r="2" />
+                  <circle cx="252" cy="300" r="2" />
+                  <circle cx="312" cy="180" r="2" />
+                </g>
+                <text
+                  x="200"
+                  y="92"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  className="opacity-0 [animation:fadein_0.6s_ease-out_1.9s_forwards]"
+                  fontFamily="IBM Plex Mono, monospace"
+                  fontSize="9"
+                  letterSpacing="2"
                 >
-                  <path
-                    d="M0 0h8M0 0v8M100 0h-8M100 0v8M0 100h8M0 100v-8M100 100h-8M100 100v-8"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="0.5"
-                  />
-                </svg>
+                  SPAN 24.00 m
+                </text>
+                <text
+                  x="200"
+                  y="505"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  className="opacity-0 [animation:fadein_0.6s_ease-out_1.9s_forwards]"
+                  fontFamily="IBM Plex Mono, monospace"
+                  fontSize="8"
+                  letterSpacing="2"
+                >
+                  TRUSS ELEVATION — TYP.
+                </text>
+              </svg>
 
-                <span className="absolute right-2 top-2 bg-flag px-1.5 py-0.5 font-mono text-[8px] font-bold tracking-[0.18em] text-white">
-                  PL. 01
-                </span>
-                <span className="absolute bottom-2 right-2 font-mono text-[8px] tracking-[0.18em] text-blueprint-ink/70">
-                  PHOTO / 01
-                </span>
+              <div className="opacity-0 [animation:fadeup_0.8s_ease-out_2.1s_forwards]">
+                <div className="group relative z-10 aspect-[3/4] -rotate-[1.5deg] border border-blueprint-line/60 bg-blueprint-panel p-2 shadow-[10px_10px_0_0_#16324F] transition-[transform,box-shadow] duration-300 hover:rotate-0 hover:scale-[1.03] hover:shadow-[14px_14px_0_0_#16324F] hover:ring-2 hover:ring-[#F6DE8A]/80">
+                  <div className="relative h-full w-full overflow-hidden border border-blueprint-ink/20">
+                    <img
+                      src="/niru.jpg"
+                      alt="Portrait of Nirjala Prajapati"
+                      className="absolute inset-0 h-full w-full object-cover object-top transition-[filter] duration-500 group-hover:brightness-110 group-hover:saturate-110"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-[#F6DE8A] opacity-0 mix-blend-soft-light transition-opacity duration-500 group-hover:opacity-30" />
+
+                    <div className="pointer-events-none absolute inset-y-0 left-0 w-4 border-r border-blueprint-line/40 bg-blueprint-paper/80 transition-opacity duration-500 group-hover:opacity-0">
+                      {[18, 38, 58, 78].map((top) => (
+                        <span
+                          key={top}
+                          style={{ top: `${top}%` }}
+                          className="absolute right-0 h-px w-2 bg-blueprint-line/70"
+                        />
+                      ))}
+                    </div>
+
+                    <svg
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="none"
+                      className="pointer-events-none absolute inset-0 h-full w-full text-blueprint-ink/30"
+                    >
+                      <path
+                        d="M0 0h8M0 0v8M100 0h-8M100 0v8M0 100h8M0 100v-8M100 100h-8M100 100v-8"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="0.5"
+                      />
+                    </svg>
+
+                    <span className="absolute right-2 top-2 bg-flag px-1.5 py-0.5 font-mono text-[8px] font-bold tracking-[0.18em] text-white">
+                      PL. 01
+                    </span>
+                    <span className="absolute bottom-2 right-2 font-mono text-[8px] tracking-[0.18em] text-blueprint-ink/70">
+                      PHOTO / 01
+                    </span>
+                  </div>
+
+                  <span className="pointer-events-none absolute -left-5 top-1/2 hidden -translate-y-1/2 -rotate-90 whitespace-nowrap font-mono text-[8px] tracking-[0.3em] text-blueprint-steel sm:block">
+                    PHOTOGRAPHIC PLATE
+                  </span>
+                </div>
               </div>
-
-              <span className="pointer-events-none absolute -left-5 top-1/2 hidden -translate-y-1/2 -rotate-90 whitespace-nowrap font-mono text-[8px] tracking-[0.3em] text-blueprint-steel sm:block">
-                PHOTOGRAPHIC PLATE
-              </span>
             </div>
 
             <div className="mt-auto flex items-center justify-center gap-2 pt-4 font-mono text-[9px] tracking-[0.18em] text-blueprint-steel">
