@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="flex flex-wrap items-end justify-between gap-8">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.25em] text-white/50">
-                  End of set
+                 
                 </p>
                 <h2 className="mt-4 font-display font-semibold text-4xl sm:text-5xl md:text-6xl tracking-tight text-balance">
                   Let's build something.

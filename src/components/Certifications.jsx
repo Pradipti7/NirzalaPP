@@ -29,7 +29,7 @@ export default function Certifications() {
   return (
     <Sheet
       title="Certifications & training"
-      kicker="Stamped and sealed"
+      kicker=""
       id="certifications"
     >
       <div className="grid sm:grid-cols-2 gap-6">

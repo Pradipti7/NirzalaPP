@@ -22,7 +22,7 @@ const groups = [
 
 export default function Skills() {
   return (
-    <Sheet title="Skills & tools" kicker="Legend" id="skills">
+    <Sheet title="Skills & tools" kicker="" id="skills">
       <div className="grid sm:grid-cols-3 gap-x-8 gap-y-12">
         {groups.map(({ label, icon: Icon, items }, gi) => (
           <Reveal key={label} delay={gi * 100} className="group">

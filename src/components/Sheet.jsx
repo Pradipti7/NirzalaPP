@@ -1,10 +1,10 @@
 import Reveal from "./Reveal.jsx";
 
-export default function Sheet({ title, kicker, children, id }) {
+export default function Sheet({ title, kicker, children, id, className = "" }) {
   return (
     <section
       id={id}
-      className="border-t border-blueprint-hairline scroll-mt-14"
+      className={`border-t border-blueprint-hairline scroll-mt-14 ${className}`}
     >
       <div className="max-w-5xl mx-auto px-6 sm:px-10 py-14 sm:py-20">
         <Reveal as="header" className="mb-12">
