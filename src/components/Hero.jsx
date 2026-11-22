@@ -88,8 +88,8 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 pb-16 pt-4 sm:px-10 sm:pb-24 sm:pt-8">
-        <div className="mt-6 grid grid-cols-1 items-stretch gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-6">
-          <div className="relative order-1 flex min-w-0 flex-col md:order-2">
+        <div className="mt-6 grid grid-cols-1 items-stretch gap-0 md:grid-cols-[minmax(0,1fr)_auto] md:gap-6">
+          <div className="relative min-w-0 contents md:order-2 md:flex md:flex-col">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-y-0 left-0 hidden w-6 -translate-x-full -ml-2 md:block"
@@ -119,7 +119,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="font-display font-semibold text-blueprint-ink tracking-tight leading-[0.92] text-6xl sm:text-8xl text-balance">
+            <h1 className="order-1 font-display font-semibold text-blueprint-ink tracking-tight leading-[0.92] text-6xl sm:text-8xl text-balance md:order-none">
               <span className="block text-2xl sm:text-4xl font-medium text-blueprint-steel tracking-normal leading-none opacity-0 [animation:fadeup_0.5s_ease-out_0.1s_forwards]">
                 I am
               </span>
@@ -132,19 +132,19 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-blueprint-steel opacity-0 animate-fadein sm:text-[11px]">
+            <p className="order-3 mt-8 font-mono text-[10px] uppercase tracking-[0.18em] text-blueprint-steel opacity-0 animate-fadein sm:text-[11px] md:order-none md:mt-4">
               Civil engineer · Site development · Structural design
             </p>
 
-            <div className="mt-7 h-px bg-blueprint-line/40 relative w-full max-w-xl overflow-hidden">
+            <div className="relative order-3 mt-7 h-px w-full max-w-xl overflow-hidden bg-blueprint-line/40 md:order-none">
               <div className="absolute inset-y-0 left-0 h-px bg-flag animate-drawline" />
             </div>
 
-            <p className="mt-6 max-w-xl text-lg text-blueprint-graphite opacity-0 animate-fadein">
+            <p className="order-3 mt-6 max-w-xl text-lg text-blueprint-graphite opacity-0 animate-fadein md:order-none">
               Motivated civil engineering graduate with hands-on academic and field experience, eager to apply theoretical knowledge to practical construction projects and site development.
             </p>
 
-            <div className="mt-auto flex flex-wrap gap-4 pt-8 opacity-0 animate-fadein">
+            <div className="order-4 mt-auto flex flex-wrap gap-4 pt-8 opacity-0 animate-fadein md:order-none">
               <a
                 href="RESUME_NIRJALA%20PRAJAPATI.pdf"
                 download
@@ -184,7 +184,7 @@ export default function Hero() {
           </div>
 
           {/* portrait */}
-          <div className="relative order-2 flex w-64 flex-col sm:w-72 md:order-3 md:w-80 md:justify-self-end">
+          <div className="relative order-2 mt-10 flex w-64 flex-col sm:w-72 md:order-3 md:mt-0 md:w-80 md:justify-self-end">
             {/* washi tape — peeled corner strips */}
             <span
               aria-hidden="true"
