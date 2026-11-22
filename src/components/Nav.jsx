@@ -11,7 +11,7 @@ const links = [
 export default function Nav() {
   return (
     <nav className="sticky top-0 z-20 bg-blueprint-paper/90 backdrop-blur border-b border-blueprint-hairline">
-      <div className="max-w-5xl mx-auto px-6 sm:px-10 h-14 flex items-center gap-6 sm:gap-8 overflow-x-auto">
+      <div className="max-w-5xl mx-auto px-6 sm:px-10 h-14 flex items-center gap-6 sm:gap-8 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <a href="#top" className="flex items-baseline gap-1.5 shrink-0 group">
           <span className="font-display font-bold text-blueprint-ink leading-none whitespace-nowrap">
             Nirjala Prajapati
