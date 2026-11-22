@@ -89,7 +89,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 pb-16 pt-4 sm:px-10 sm:pb-24 sm:pt-8">
         <div className="mt-6 grid grid-cols-1 items-stretch gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-6">
-          <div className="relative order-2 flex min-w-0 flex-col">
+          <div className="relative order-1 flex min-w-0 flex-col md:order-2">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-y-0 left-0 hidden w-6 -translate-x-full -ml-2 md:block"
@@ -184,7 +184,7 @@ export default function Hero() {
           </div>
 
           {/* portrait */}
-          <div className="relative order-1 flex w-64 flex-col sm:w-72 md:order-3 md:w-80 md:justify-self-end">
+          <div className="relative order-2 flex w-64 flex-col sm:w-72 md:order-3 md:w-80 md:justify-self-end">
             {/* washi tape — peeled corner strips */}
             <span
               aria-hidden="true"
